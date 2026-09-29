@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/project-logo.png" alt="ESP32 Find My Beacon logo" width="190">
+</p>
+
 # ESP32 Find My Beacon — permanent master setup
 
 This is the clean, repeatable master repository for a personal ESP32 beacon
