@@ -5,7 +5,7 @@
 # ESP32 Find My Beacon — permanent master setup
 
 This is the clean, repeatable master repository for a personal ESP32 beacon
-setup using the Apple Find My network, Macless-Haystack, Anisette, an HTTPS
+setup using the Apple Find My network, Anisette, an HTTPS
 endpoint, and a Flutter web dashboard.
 
 > Use this only for devices you own or have permission to track. Apple may
