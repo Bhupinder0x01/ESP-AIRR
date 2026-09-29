@@ -15,7 +15,7 @@ endpoint, and a Flutter web dashboard.
 ## What lives where
 
 <p align="center">
-  <img src="images/architecture.png" width="1100">
+  <img src="images/flowchart.jpg" width="1100">
 </p>
 
 | Folder | Purpose |
