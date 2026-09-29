@@ -287,3 +287,7 @@ then Caddy/DNS, then the dashboard endpoint settings.
 
 See [docs/OPERATIONS.md](docs/OPERATIONS.md) for restore and troubleshooting
 steps, and [PATCHES.md](PATCHES.md) for the permanent patch record.
+
+## Dashboard preview
+
+![Macless-Haystack dashboard preview](images/dashboard_web.png)
