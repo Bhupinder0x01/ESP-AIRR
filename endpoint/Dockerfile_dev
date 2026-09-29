@@ -1,0 +1,11 @@
+FROM python:3.12-slim
+
+# Development image: intentionally builds the checked-out master source too.
+ENV TERM=xterm PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+WORKDIR /app
+COPY endpoint/requirements.txt /app/endpoint/requirements.txt
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r /app/endpoint/requirements.txt
+COPY endpoint /app/endpoint
+EXPOSE 6176
+CMD ["python", "-u", "/app/endpoint/mh_endpoint.py"]

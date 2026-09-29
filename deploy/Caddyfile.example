@@ -1,0 +1,5 @@
+# Replace tracker.example.com with your DuckDNS hostname or domain.
+# Caddy obtains and renews HTTPS certificates automatically.
+tracker.example.com {
+    reverse_proxy 127.0.0.1:6176
+}

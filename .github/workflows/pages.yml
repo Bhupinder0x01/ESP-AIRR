@@ -1,0 +1,41 @@
+name: Deploy Flutter frontend to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Build the web app
+        working-directory: macless_haystack
+        run: |
+          flutter pub get
+          flutter test
+          repo_name="${GITHUB_REPOSITORY#*/}"
+          flutter build web --release --base-href "/${repo_name}/"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: macless_haystack/build/web
+      - id: deployment
+        uses: actions/deploy-pages@v4

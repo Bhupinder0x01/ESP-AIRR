@@ -1,0 +1,15 @@
+[Settings]
+# Keep this internal Docker address when using deploy/docker-compose.yml.
+anisette_url=http://anisette:6969
+binding_address=0.0.0.0
+port=6176
+loglevel=INFO
+
+# Leave Apple credentials blank: the endpoint will prompt during first run.
+# Never commit a real config.ini or auth.json.
+appleid=
+appleid_pass=
+
+# Set both values before exposing the endpoint through Caddy.
+endpoint_user=change-me
+endpoint_pass=use-a-long-unique-password

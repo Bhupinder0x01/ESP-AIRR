@@ -1,0 +1,32 @@
+services:
+  anisette:
+    image: dadoum/anisette-v3-server
+    container_name: anisette
+    restart: unless-stopped
+    volumes:
+      - anisette_data:/home/Alcoholic/.config/anisette-v3
+    networks: [mh-network]
+
+  macless-haystack:
+    build:
+      context: ..
+      dockerfile: endpoint/Dockerfile
+    container_name: macless-haystack
+    restart: unless-stopped
+    depends_on: [anisette]
+    # Caddy is the only public-facing service. Do not publish 6969.
+    ports:
+      - "127.0.0.1:6176:6176"
+    volumes:
+      - mh_data:/app/endpoint/data
+    networks: [mh-network]
+
+networks:
+  mh-network:
+    name: mh-network
+
+volumes:
+  anisette_data:
+    name: anisette-v3_data
+  mh_data:
+    name: mh_data

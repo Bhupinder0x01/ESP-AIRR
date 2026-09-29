@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+# Deliberate no-op. Pulling upstream here would replace the permanent local
+# authentication fixes in this master repository without review or testing.
+echo "Automatic upstream update disabled; this image uses the checked-out master source."
