@@ -15,7 +15,7 @@ endpoint, and a Flutter web dashboard.
 ## What lives where
 
 <p align="center">
-  <img src="images/flowchart.jpg" alt="ESP32 Find My Beacon logo" width="190">
+  <img src="images/architecture.png" width="1100">
 </p>
 
 | Folder | Purpose |
