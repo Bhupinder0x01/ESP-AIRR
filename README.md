@@ -6,9 +6,7 @@
 
 This is the clean, repeatable master repository for a personal ESP32 beacon
 setup using the Apple Find My network, Macless-Haystack, Anisette, an HTTPS
-endpoint, and a Flutter web dashboard. It starts from the preserved
-Macless-Haystack source (upstream commit `0bda271`) and keeps the local
-compatibility fixes in the codebase.
+endpoint, and a Flutter web dashboard.
 
 > Use this only for devices you own or have permission to track. Apple may
 > change its private services at any time; this project is not affiliated with
@@ -16,17 +14,9 @@ compatibility fixes in the codebase.
 
 ## What lives where
 
-```text
-ESP32 --BLE--> nearby Apple devices --> Find My network
-                                      |
-                                      v
-                          Azure VM: Anisette + endpoint
-                                      |
-                                    HTTPS
-                                      |
-                                      v
-                         GitHub Pages Flutter dashboard
-```
+<p align="center">
+  <img src="images/flowchart.jpg" alt="ESP32 Find My Beacon logo" width="190">
+</p>
 
 | Folder | Purpose |
 | --- | --- |
