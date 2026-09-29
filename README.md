@@ -21,7 +21,7 @@ endpoint, and a Flutter web dashboard.
 | Folder | Purpose |
 | --- | --- |
 | `endpoint/` | Patched Python endpoint and local Docker image definition |
-| `macless_haystack/` | Flutter frontend source; endpoint is configured in the app settings |
+| `haystack/` | Flutter frontend source; endpoint is configured in the app settings |
 | `firmware/ESP32/` | ESP32 source and known-good prebuilt firmware |
 | `deploy/` | Docker Compose and Caddy templates for the Azure VM |
 | `tools/` | Safe helpers to create a device identity, flash a board, and inspect reports |
@@ -200,8 +200,7 @@ public URL.
 Push this repository to a **private** GitHub repository after reviewing the
 secret check below. In GitHub, open **Settings → Pages** and select **GitHub
 Actions** as the source. The included Pages workflow builds
-`macless_haystack/` from source and deploys it automatically after a push to
-`main`.
+
 
 For a project Pages site, it automatically uses `/<repository-name>/` as the
 Flutter base path. For a custom domain/root site, change the workflow build
